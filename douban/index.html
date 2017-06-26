@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>豆瓣-电影</title>
+	</head>
+	<script src="js/jquery-2.2.4.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/header.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/body.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="js/search.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="css/header.css" />
+	<link rel="stylesheet" type="text/css" href="css/body.css" />
+    <link rel="stylesheet" type="text/css" href="css/movie.css" />
+	<body>
+		<header>
+			<div class='douban-info'>
+				<a href="">注册</a>
+				<a href="">登录</a>
+			</div>
+			<div class='douban-app'>
+				<a href="">下载豆瓣客户端</a>
+			</div>
+			<div class="douban-items">
+				<ul>
+					<li>
+						<a href="">豆瓣</a>
+					</li>
+					<li>
+						<a href="">读书</a>
+					</li>
+					<li>
+						<a href="">电影</a>
+					</li>
+					<li>
+						<a href="">音乐</a>
+					</li>
+					<li>
+						<a href="">同城</a>
+					</li>
+					<li>
+						<a href="">小组</a>
+					</li>
+					<li>
+						<a href="">阅读</a>
+					</li>
+					<li>
+						<a href="">FM</a>
+					</li>
+					<li>
+						<a href="">东西</a>
+					</li>
+					<li>
+						<a href="">市集</a>
+					</li>
+					<li>
+						<a href="">更多</a>
+					</li>
+				</ul>
+			</div>
+			<div class="nav-movie">
+				<div class="movie-search">
+					<div class="nav-box">
+						<div class="nav-logo">
+							<a href="">豆瓣电影</a>
+						</div>
+						<div class="nav-search">
+							<div class="nav-ipt">
+								<input type='text' id="inp-query" name="search_text" size="22" maxlength="60" placeholder="电影、影人、影院、电视剧" autocomplete="off">
+							</div>
+							<div class="nav-btn">
+								<input type="submit" value="搜索" id="nav-sub">
+							</div>
+							<div class="nav-list">
+								<ul id='list'>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="movie-items">
+					<div class="nav-sec">
+						<div class="nav-items">
+							<ul>
+								<li>
+									<a href="">影讯&购票</a>
+								</li>
+								<li>
+									<a href="">选电影</a>
+								</li>
+								<li>
+									<a href="">电视剧</a>
+								</li>
+								<li>
+									<a href="">排行榜</a>
+								</li>
+								<li>
+									<a href="">分类</a>
+								</li>
+								<li>
+									<a href="">影评</a>
+								</li>
+								<li>
+									<a href="">2016年度榜单</a>
+								</li>
+								<li>
+									<a href="">2016年观影报告</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<nav id="box">
+			<div class="content">
+				<div class="article clearfix">
+					<div class="top-movie">
+						<h2><span>正在热映</span>
+							<span><a href="">全部正在热映>></a></span>
+							<span><a href="">即将上映>></a></span>
+							<div class="slide clearfix">
+								<span id="movie-page">
+								1/9
+							</span>
+								<a href="javascript:;">&lt;</a>
+								<a href="javascript:;">&gt;</a>
+							</div>
+                           
+						</h2>
+						<div class="hit-movie">
+							<ul id='movie-slide' class="clearfix">
+								<li>
+									<ul>
+										<li class="poster">
+											<a href="javascript:;"><img src="https://img3.doubanio.com/view/movie_poster_cover/lpst/public/p2455261804.webp" /></a>
+										</li>
+										<li class="title">
+											<a href="javascript:;">银河护卫队2</a>
+										</li>
+										<li class="rating">
+											<span class="rating-star"></span><span class="subject-rate">7.2</span>
+										</li>
+										<li class="ticket-btn">
+											<span><a href="javascript:;">选座购票</a></span>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<ul>
+										<li class="poster">
+											<a href=""><img src="https://img3.doubanio.com/view/movie_poster_cover/lpst/public/p2459723975.webp" /></a>
+										</li>
+										<li class="title">
+											<a href="">加勒比海盗5</a>
+										</li>
+										<li class="rating">
+											<span class="rating-star"></span><span class="subject-rate">7.2</span>
+										</li>
+										<li class="ticket-btn">
+											<span><a href="javascript:;">选座购票</a></span>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<ul>
+										<li class="poster">
+											<a href=""><img src="https://img3.doubanio.com/view/movie_poster_cover/lpst/public/p2459600525.webp" /></a>
+										</li>
+										<li class="title">
+											<a href="">多拉A梦</a>
+										</li>
+										<li class="rating">
+											<span class="rating-star"></span><span class="subject-rate">7.2</span>
+										</li>
+										<li class="ticket-btn">
+											<span><a href="javascript:;">选座购票</a></span>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<ul>
+										<li class="poster">
+											<a href=""><img src="https://img3.doubanio.com/view/movie_poster_cover/lpst/public/p2457983084.webp" /></a>
+										</li>
+										<li class="title">
+											<a href="">摔跤吧爸爸</a>
+										</li>
+										<li class="rating">
+											<span class="rating-star"></span><span class="subject-rate">7.2</span>
+										</li>
+										<li class="ticket-btn">
+											<span><a href="javascript:;">选座购票</a></span>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<ul>
+										<li class="poster">
+											<a href=""><img src="https://img3.doubanio.com/view/movie_poster_cover/lpst/public/p2459663581.webp" /></a>
+										</li>
+										<li class="title">
+											<a href="">荡寇风云</a>
+										</li>
+										<li class="rating">
+											<span class="rating-star"></span><span class="subject-rate">7.2</span>
+										</li>
+										<li class="ticket-btn">
+											<span><a href="">选座购票</a></span>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<ul>
+										<li class="poster">
+											<a href=""><img src="https://img1.doubanio.com/view/movie_poster_cover/lpst/public/p2459199108.webp" /></a>
+										</li>
+										<li class="title">
+											<a href="">吃吃的爱</a>
+										</li>
+										<li class="rating">
+											<span class="rating-star"></span><span class="subject-rate">7.2</span>
+										</li>
+										<li class="ticket-btn">
+											<span><a href="">选座购票</a></span>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<ul>
+										<li class="poster">
+											<a href=""><img src="https://img3.doubanio.com/view/movie_poster_cover/lpst/public/p2454788953.webp" /></a>
+										</li>
+										<li class="title">
+											<a href="javascript:;">临时演员</a>
+										</li>
+										<li class="rating">
+											<span class="rating-star"></span><span class="subject-rate">7.2</span>
+										</li>
+										<li class="ticket-btn">
+											<span><a href="">选座购票</a></span>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<ul>
+										<li class="poster">
+											<a href=""><img src="https://img1.doubanio.com/view/movie_poster_cover/lpst/public/p2460135107.webp" /></a>
+										</li>
+										<li class="title">
+											<a href="">我爸爸是国王</a>
+										</li>
+										<li class="rating">
+											<span class="rating-star"></span><span class="subject-rate">7.2</span>
+										</li>
+										<li class="ticket-btn">
+											<span><a href="">选座购票</a></span>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<ul>
+										<li class="poster">
+											<a href=""><img src="https://img3.doubanio.com/view/movie_poster_cover/lpst/public/p2455261804.webp" /></a>
+										</li>
+										<li class="title">
+											<a href="">银河护卫队2</a>
+										</li>
+										<li class="rating">
+											<span class="rating-star"></span><span class="subject-rate">7.2</span>
+										</li>
+										<li class="ticket-btn">
+											<span><a href="">选座购票</a></span>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<ul>
+										<li class="poster">
+											<a href=""><img src="https://img3.doubanio.com/view/movie_poster_cover/lpst/public/p2459723975.webp" /></a>
+										</li>
+										<li class="title">
+											<a href="">加勒比海盗5</a>
+										</li>
+										<li class="rating">
+											<span class="rating-star"></span><span class="subject-rate">7.2</span>
+										</li>
+										<li class="ticket-btn">
+											<span><a href="">选座购票</a></span>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<ul>
+										<li class="poster">
+											<a href=""><img src="https://img3.doubanio.com/view/movie_poster_cover/lpst/public/p2459600525.webp" /></a>
+										</li>
+										<li class="title">
+											<a href="">多拉A梦</a>
+										</li>
+										<li class="rating">
+											<span class="rating-star"></span><span class="subject-rate">7.2</span>
+										</li>
+										<li class="ticket-btn">
+											<span><a href="">选座购票</a></span>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<ul>
+										<li class="poster">
+											<a href=""><img src="https://img3.doubanio.com/view/movie_poster_cover/lpst/public/p2457983084.webp" /></a>
+										</li>
+										<li class="title">
+											<a href="">摔跤吧爸爸</a>
+										</li>
+										<li class="rating">
+											<span class="rating-star"></span><span class="subject-rate">7.2</span>
+										</li>
+										<li class="ticket-btn">
+											<span><a href="">选座购票</a></span>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<ul>
+										<li class="poster">
+											<a href=""><img src="https://img3.doubanio.com/view/movie_poster_cover/lpst/public/p2459663581.webp" /></a>
+										</li>
+										<li class="title">
+											<a href="">荡寇风云</a>
+										</li>
+										<li class="rating">
+											<span class="rating-star"></span><span class="subject-rate">7.2</span>
+										</li>
+										<li class="ticket-btn">
+											<span><a href="">选座购票</a></span>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<ul>
+										<li class="poster">
+											<a href=""><img src="https://img1.doubanio.com/view/movie_poster_cover/lpst/public/p2459199108.webp" /></a>
+										</li>
+										<li class="title">
+											<a href="">吃吃的爱</a>
+										</li>
+										<li class="rating">
+											<span class="rating-star"></span><span class="subject-rate">7.2</span>
+										</li>
+										<li class="ticket-btn">
+											<span><a href="">选座购票</a></span>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<ul>
+										<li class="poster">
+											<a href=""><img src="https://img3.doubanio.com/view/movie_poster_cover/lpst/public/p2454788953.webp" /></a>
+										</li>
+										<li class="title">
+											<a href="">临时演员</a>
+										</li>
+										<li class="rating">
+											<span class="rating-star"></span><span class="subject-rate">7.2</span>
+										</li>
+										<li class="ticket-btn">
+											<span><a href="">选座购票</a></span>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<ul>
+										<li class="poster">
+											<a href=""><img src="https://img1.doubanio.com/view/movie_poster_cover/lpst/public/p2460135107.webp" /></a>
+										</li>
+										<li class="title">
+											<a href="">我爸爸是国王</a>
+										</li>
+										<li class="rating">
+											<span class="rating-star"></span><span class="subject-rate">7.2</span>
+										</li>
+										<li class="ticket-btn">
+											<span><a href="">选座购票</a></span>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<ul>
+										<li class="poster">
+											<a href=""><img src="https://img1.doubanio.com/view/movie_poster_cover/lpst/public/p2460135107.webp" /></a>
+										</li>
+										<li class="title">
+											<a href="">我爸爸是国王</a>
+										</li>
+										<li class="rating">
+											<span class="rating-star"></span><span class="subject-rate">7.2</span>
+										</li>
+										<li class="ticket-btn">
+											<span><a href="">选座购票</a></span>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<ul>
+										<li class="poster">
+											<a href=""><img src="https://img1.doubanio.com/view/movie_poster_cover/lpst/public/p2460135107.webp" /></a>
+										</li>
+										<li class="title">
+											<a href="">我爸爸是国王</a>
+										</li>
+										<li class="rating">
+											<span class="rating-star"></span><span class="subject-rate">7.2</span>
+										</li>
+										<li class="ticket-btn">
+											<span><a href="">选座购票</a></span>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<ul>
+										<li class="poster">
+											<a href=""><img src="https://img1.doubanio.com/view/movie_poster_cover/lpst/public/p2460135107.webp" /></a>
+										</li>
+										<li class="title">
+											<a href="">我爸爸是国王</a>
+										</li>
+										<li class="rating">
+											<span class="rating-star"></span><span class="subject-rate">7.2</span>
+										</li>
+										<li class="ticket-btn">
+											<span><a href="">选座购票</a></span>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<ul>
+										<li class="poster">
+											<a href=""><img src="https://img1.doubanio.com/view/movie_poster_cover/lpst/public/p2460135107.webp" /></a>
+										</li>
+										<li class="title">
+											<a href="">我爸爸是国王</a>
+										</li>
+										<li class="rating">
+											<span class="rating-star"></span><span class="subject-rate">7.2</span>
+										</li>
+										<li class="ticket-btn">
+											<span><a href="">选座购票</a></span>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<ul>
+										<li class="poster">
+											<a href=""><img src="https://img1.doubanio.com/view/movie_poster_cover/lpst/public/p2460135107.webp" /></a>
+										</li>
+										<li class="title">
+											<a href="">我爸爸是国王</a>
+										</li>
+										<li class="rating">
+											<span class="rating-star"></span><span class="subject-rate">7.2</span>
+										</li>
+										<li class="ticket-btn">
+											<span><a href="">选座购票</a></span>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<ul>
+										<li class="poster">
+											<a href=""><img src="https://img1.doubanio.com/view/movie_poster_cover/lpst/public/p2460135107.webp" /></a>
+										</li>
+										<li class="title">
+											<a href="">我爸爸是国王</a>
+										</li>
+										<li class="rating">
+											<span class="rating-star"></span><span class="subject-rate">7.2</span>
+										</li>
+										<li class="ticket-btn">
+											<span><a href="">选座购票</a></span>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<ul>
+										<li class="poster">
+											<a href=""><img src="https://img1.doubanio.com/view/movie_poster_cover/lpst/public/p2460135107.webp" /></a>
+										</li>
+										<li class="title">
+											<a href="">我爸爸是国王</a>
+										</li>
+										<li class="rating">
+											<span class="rating-star"></span><span class="subject-rate">7.2</span>
+										</li>
+										<li class="ticket-btn">
+											<span><a href="">选座购票</a></span>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<ul>
+										<li class="poster">
+											<a href=""><img src="https://img1.doubanio.com/view/movie_poster_cover/lpst/public/p2460135107.webp" /></a>
+										</li>
+										<li class="title">
+											<a href="">我爸爸是国王</a>
+										</li>
+										<li class="rating">
+											<span class="rating-star"></span><span class="subject-rate">7.2</span>
+										</li>
+										<li class="ticket-btn">
+											<span><a href="">选座购票</a></span>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<ul>
+										<li class="poster">
+											<a href=""><img src="https://img1.doubanio.com/view/movie_poster_cover/lpst/public/p2460135107.webp" /></a>
+										</li>
+										<li class="title">
+											<a href="">我爸爸是国王</a>
+										</li>
+										<li class="rating">
+											<span class="rating-star"></span><span class="subject-rate">7.2</span>
+										</li>
+										<li class="ticket-btn">
+											<span><a href="">选座购票</a></span>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<ul>
+										<li class="poster">
+											<a href=""><img src="https://img1.doubanio.com/view/movie_poster_cover/lpst/public/p2460135107.webp" /></a>
+										</li>
+										<li class="title">
+											<a href="">我爸爸是国王</a>
+										</li>
+										<li class="rating">
+											<span class="rating-star"></span><span class="subject-rate">7.2</span>
+										</li>
+										<li class="ticket-btn">
+											<span><a href="">选座购票</a></span>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<ul>
+										<li class="poster">
+											<a href=""><img src="https://img1.doubanio.com/view/movie_poster_cover/lpst/public/p2460135107.webp" /></a>
+										</li>
+										<li class="title">
+											<a href="">我爸爸是国王</a>
+										</li>
+										<li class="rating">
+											<span class="rating-star"></span><span class="subject-rate">7.2</span>
+										</li>
+										<li class="ticket-btn">
+											<span><a href="">选座购票</a></span>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<ul>
+										<li class="poster">
+											<a href=""><img src="https://img1.doubanio.com/view/movie_poster_cover/lpst/public/p2460135107.webp" /></a>
+										</li>
+										<li class="title">
+											<a href="">我爸爸是国王</a>
+										</li>
+										<li class="rating">
+											<span class="rating-star"></span><span class="subject-rate">7.2</span>
+										</li>
+										<li class="ticket-btn">
+											<span><a href="">选座购票</a></span>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<ul>
+										<li class="poster">
+											<a href=""><img src="https://img1.doubanio.com/view/movie_poster_cover/lpst/public/p2460135107.webp" /></a>
+										</li>
+										<li class="title">
+											<a href="">我爸爸是国王</a>
+										</li>
+										<li class="rating">
+											<span class="rating-star"></span><span class="subject-rate">7.2</span>
+										</li>
+										<li class="ticket-btn">
+											<span><a href="">选座购票</a></span>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<ul>
+										<li class="poster">
+											<a href=""><img src="https://img1.doubanio.com/view/movie_poster_cover/lpst/public/p2460135107.webp" /></a>
+										</li>
+										<li class="title">
+											<a href="">我爸爸是国王</a>
+										</li>
+										<li class="rating">
+											<span class="rating-star"></span><span class="subject-rate">7.2</span>
+										</li>
+										<li class="ticket-btn">
+											<span><a href="">选座购票</a></span>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<ul>
+										<li class="poster">
+											<a href=""><img src="https://img1.doubanio.com/view/movie_poster_cover/lpst/public/p2460135107.webp" /></a>
+										</li>
+										<li class="title">
+											<a href="">我爸爸是国王</a>
+										</li>
+										<li class="rating">
+											<span class="rating-star"></span><span class="subject-rate">7.2</span>
+										</li>
+										<li class="ticket-btn">
+											<span><a href="">选座购票</a></span>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<ul>
+										<li class="poster">
+											<a href=""><img src="https://img1.doubanio.com/view/movie_poster_cover/lpst/public/p2460135107.webp" /></a>
+										</li>
+										<li class="title">
+											<a href="">我爸爸是国王</a>
+										</li>
+										<li class="rating">
+											<span class="rating-star"></span><span class="subject-rate">7.2</span>
+										</li>
+										<li class="ticket-btn">
+											<span><a href="">选座购票</a></span>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<ul>
+										<li class="poster">
+											<a href=""><img src="https://img1.doubanio.com/view/movie_poster_cover/lpst/public/p2460135107.webp" /></a>
+										</li>
+										<li class="title">
+											<a href="">我爸爸是国王</a>
+										</li>
+										<li class="rating">
+											<span class="rating-star"></span><span class="subject-rate">7.2</span>
+										</li>
+										<li class="ticket-btn">
+											<span><a href="">选座购票</a></span>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<ul>
+										<li class="poster">
+											<a href=""><img src="https://img1.doubanio.com/view/movie_poster_cover/lpst/public/p2460135107.webp" /></a>
+										</li>
+										<li class="title">
+											<a href="">我爸爸是国王</a>
+										</li>
+										<li class="rating">
+											<span class="rating-star"></span><span class="subject-rate">7.2</span>
+										</li>
+										<li class="ticket-btn">
+											<span><a href="">选座购票</a></span>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<ul>
+										<li class="poster">
+											<a href=""><img src="https://img1.doubanio.com/view/movie_poster_cover/lpst/public/p2460135107.webp" /></a>
+										</li>
+										<li class="title">
+											<a href="">我爸爸是国王</a>
+										</li>
+										<li class="rating">
+											<span class="rating-star"></span><span class="subject-rate">7.2</span>
+										</li>
+										<li class="ticket-btn">
+											<span><a href="">选座购票</a></span>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<article></article>
+			</div>
+		</nav>
+		
+	</body>
+
+</html>

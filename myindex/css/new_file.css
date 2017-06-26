@@ -1,0 +1,123 @@
+@charset "utf-8";
+* {
+	margin: 0;
+	padding: 0;
+}
+
+#hezi {
+	width: 100%;
+	min-width: 850px;
+	height: 39px;
+	background-color: rgba(0, 0, 0, 0.5);
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 70;
+}
+
+#mynav {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.xingm {
+	float: left;
+	line-height: 39px;
+	color: #AEEEEE;
+	font-family: "宋体";
+}
+
+#menu {
+	float: right;
+	list-style-type: none;
+	z-index: 70;
+}
+
+#menu li {
+	float: left;
+	margin: 0 5px 0 0;
+	font-size: 14px;
+}
+
+#menu a {
+	float: right;
+	padding: 11px 20px;
+	color: #fff;
+	text-decoration: none;
+}
+
+#menu .active a {
+	color: #fff;
+	background-color: rgba(255, 255, 255, 0.7);
+}
+
+.section {
+	text-align: center;
+	font: 50px "Microsoft Yahei";
+	color: #fff;
+}
+
+#ym1 {
+	background-image: url(../img/01.jpg);
+}
+
+#ym2 {
+	background-image: url(../img/03.jpg);
+}
+
+#ym3 {
+	background-image: url(../img/02.jpg);
+}
+
+#ym4 {
+	background-image: url(../img/04.jpg);
+}
+
+#ym5 {
+	background-image: url(../img/05.jpg);
+}
+
+#ym6 {
+	background-image: url(../img/06.jpg);
+}
+
+#ym1 h3:nth-of-type(1) {
+	font-family: "宋体";
+	color: #E0EEEE;
+	text-shadow: 2px 2px #000;
+}
+
+#ym1 h3:nth-of-type(2) {
+	font-family: "宋体";
+	color: #97FFFF;
+}
+
+#ym6 span {
+	font-family: "宋体";
+	color: #fff;
+	font-size: 24px;
+}
+
+.section4 p {
+	position: relative;
+	left: -120%;
+}
+
+.section5 p {
+	position: relative;
+	bottom: -120%;
+}
+
+.section6 span {
+	display: none;
+}
+.table .table_left table{
+	border-collapse: collapse;
+	border: 1px solid #fff;
+	font-size: 16px;
+	font-weight: 600;
+	color: #000;
+}
+.table .table_left table td{
+	line-height: 70px;
+}
